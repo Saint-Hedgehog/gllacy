@@ -2001,7 +2001,7 @@ img {
 
 /*Фильтр - сортировка*/
 
-.sorting-filter select[name="sorting"] {
+.filter-form__select {
   width: 196px;
   height: 36px;
   padding: 8px 15px 10px 16px;
@@ -2022,29 +2022,27 @@ img {
   appearance: none;
 }
 
-.sorting-filter select[name="sorting"]::before {
+.filter-form__select::before {
   content: "";
   background-image: url("../img/icon-triangle-black.svg");
   background-repeat: no-repeat;
   visibility: hidden;
 }
 
-.sorting-filter select[name="sorting"]:hover,
-.sorting-filter select[name="sorting"]:focus {
+.filter-form__select:hover,
+.filter-form__select:focus {
   color: var(--basic-dark);
   background-image: url("../img/icon-triangle-black.svg");
   background-repeat: no-repeat;
   cursor: pointer;
 }
 
-.sorting-filter select[name="sorting"]:focus {
+.filter-form__select:focus {
   background-color: var(--basic-white);
   outline: none;
 }
 
-select[name="sorting"] option {
-  margin-left: 20px;
-  padding-left: 20px;
+.filter-form__select option {
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
