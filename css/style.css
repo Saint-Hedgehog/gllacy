@@ -228,11 +228,7 @@
 }
 
 .body {
-  display: grid;
-  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
-  grid-template-rows: min-content 1fr min-content;
   min-width: 1200px;
-  min-height: 100%;
   margin: 0;
   padding: 0;
   font-family: "Roboto", "Arial", sans-serif;
@@ -328,6 +324,10 @@ img {
 /*Управление слайдером*/
 
 .site-container {
+  display: grid;
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
+  grid-template-rows: min-content 1fr min-content;
+  min-height: 100%;
   background-color: var(--basic-turquoise);
   background-image: url("../img/slide-1.png");
   background-repeat: no-repeat;
@@ -623,7 +623,7 @@ img {
 
 .header .button {
   position: relative;
-  padding: 9px 16px 7px 45px;
+  padding: 9px 16px 7px 44px;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
@@ -1050,12 +1050,16 @@ img {
 .special-offer .button {
   margin-left: auto;
   margin-right: 6px;
-  padding: 12px 22px 12px 23px;
+  padding: 12px 22px 12px 22px;
   line-height: 24px;
   background: linear-gradient(180deg, var(--basic-orange) 0%, var(--basic-orange-darken) 100%);
   text-shadow: 0 2px 5px var(--basic-red-opacity-076);
   box-shadow: 0 2px 2px var(--basic-red-opacity-064);
   border-radius: 70px;
+}
+
+.special-offer__chocolate .button {
+  padding: 13px 23px 11px 22px;
 }
 
 .special-offer .button:hover,
@@ -1308,7 +1312,7 @@ img {
 
 /*Оформление подписки*/
 
-.subsrcibe {
+.subscribe {
   width: 560px;
   min-height: 210px;
   padding: 5px;
@@ -1321,7 +1325,7 @@ img {
   box-sizing: border-box;
 }
 
-.subsrcibe__wrap {
+.subscribe__wrap {
   height: 100%;
   padding: 19px 21px;
   background-color: var(--basic-yellow-light);
@@ -1329,19 +1333,19 @@ img {
   box-sizing: border-box;
 }
 
-.subsrcibe__wrap > p {
+.subscribe__wrap > p {
   margin-top: 5px;
   margin-bottom: 40px;
 }
 
-.subsrcibe__form {
+.subscribe__form {
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
   align-items: center;
 }
 
-.subsrcibe__form .form-input {
+.subscribe__form .form-input {
   width: 366px;
   margin-top: 2px;
   margin-left: 1px;
@@ -1349,8 +1353,8 @@ img {
   border-radius: 5px;
 }
 
-.subsrcibe__button {
-  padding: 11px 20px 9px 19px;
+.subscribe__button {
+  padding: 11px 20px 9px 18px;
   text-shadow: 0 2px 5px var(--basic-red-opacity-076);
   box-shadow: 0 2px 2px var(--basic-red-opacity-064);
   border-radius: 70px;
@@ -1599,6 +1603,13 @@ img {
 
 /*===Страница каталога===*/
 
+.catalog-page .body {
+  display: grid;
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
+  grid-template-rows: min-content 1fr min-content;
+  min-height: 100%;
+}
+
 /*===Загловок===*/
 .catalog-page .header__grid-container {
   grid-template-columns: 164px 485px 1fr -webkit-min-content -webkit-min-content;
@@ -1658,11 +1669,11 @@ img {
 }
 
 .catalog-page .login__button {
-  padding: 9px 16px 7px 44px;
+  padding: 9px 17px 7px 44px;
 }
 
 .catalog-page .basket__button {
-  padding: 9px 17px 7px 44px;
+  padding: 9px 16px 7px 44px;
   color: var(--basic-dark);
   background-color: var(--basic-white);
 }
@@ -1831,7 +1842,7 @@ img {
 
 .basket__button-container .button-form {
   margin-top: -1px;
-  padding: 14px 15px 14px 16px;
+  padding: 14px 15px 14px 15px;
   line-height: 16px;
   color: var(--basic-white);
   box-shadow: 0 1px 2px var(--basic-red-opacity-025);
@@ -2186,12 +2197,16 @@ select[name="sorting"] option {
 .filter-form__input-checkbox + label::before {
   position: absolute;
   top: 50%;
-  left: -1px;
+  left: 0;
   content: "";
   background-repeat: no-repeat;
   background-position: 0 0;
   opacity: 0.8;
   transform: translateY(-50%);
+}
+
+.filter-form__fat-0 + label::before {
+  left: -1px;
 }
 
 .filter-form__input-radio + label:hover::before,
@@ -2212,6 +2227,10 @@ select[name="sorting"] option {
   height: 20px;
   background-image: url("../img/icon-checkbox-off.svg");
   background-repeat: no-repeat;
+}
+
+.filter-form__fillers-sugar-powders + label::before {
+  left: 2px;
 }
 
 .filter-form__fillers-fruit + label::before {
@@ -2275,7 +2294,7 @@ select[name="sorting"] option {
 }
 
 .fillers-filter .filter-form__option:nth-child(4) {
-  margin-right: 20px;
+  margin-right: 21px;
 }
 
 .filter-form__input-checkbox-fruit + label:nth-child(2)::before {
@@ -2295,6 +2314,7 @@ select[name="sorting"] option {
   width: 144px;
   height: 36px;
   margin-top: 25px;
+  margin-left: 3px;
   padding: 5px 27px;
   font: inherit;
   font-weight: 500;
@@ -2402,7 +2422,7 @@ select[name="sorting"] option {
 }
 
 .pagination__item-next a {
-  padding: 4px 0 4px 8px;
+  padding: 4px 0 4px 9px;
 }
 
 .pagination__item-prev a:hover,
@@ -2504,7 +2524,7 @@ select[name="sorting"] option {
 
 .feedback-form .button {
   align-self: flex-end;
-  padding: 11px 25px 9px 24px;
+  padding: 11px 25px 9px 23px;
   text-shadow: 0 2px 5px var(--basic-red-opacity-076);
   box-shadow: 0 2px 2px var(--basic-red-opacity-064);
   border-radius: 70px;
